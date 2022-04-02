@@ -16,7 +16,7 @@ function App() {
   });
 
   const searchPokemon = () => {
-    Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`).then(
+    Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`).then(
       (response) => {
         const searchedPokemon = response.data;
         setPokemon({
